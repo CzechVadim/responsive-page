@@ -1,20 +1,61 @@
 .hero {
-    max-width: 480px;
     height: 400px;
     margin-left: auto;
     margin-right: auto;
-    background-image: linear-gradient(to right, $gradient-color, $gradient-color), url("../images/hero-image.jpg");
+    background-image: linear-gradient(to right, $gradient-color, $gradient-color), url("../images/mobile-hero-image.jpg");
     background-color: $hero-color;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-  }
+
+    @media screen and (min-width: 768px) {
+      background-image: linear-gradient(to right, $gradient-color, $gradient-color), url("../images/tablet-hero-image.jpg");
+    }
+}
 
 .hero__container {
+    height: 400px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    height: 400px;
+    text-align: center;
     outline: 1px solid red;
+}
+
+.hero__title {
+    margin-top: 0px; 
+    margin-bottom: 30px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 42px;
+    letter-spacing: 0.06em;
+    color: $white-text;
+}
+
+.button {
+    min-width: 200px;
+    padding-left: 32px; 
+    padding-top: 10px;
+    padding-right: 32px; 
+    padding-bottom: 10px; 
+    border: 0px;
+    border-radius: 4px;
+    background-color: $blue-color;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    color: $white-text;
+    transition: 250ms $timing;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+    background-color: $gray-text;
+    color: $white-text;
 }
