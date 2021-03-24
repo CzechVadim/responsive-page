@@ -1,0 +1,235 @@
+.footer {
+    background-color: $hero-color;
+}
+  
+.footer-container {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    outline: 1px solid red;
+}
+
+.footer-wrapper {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+    }
+}
+
+.footer-list {
+    text-align: center;
+}
+
+.footer-list__item {
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+        margin-right: 165px;
+    }
+}
+
+.footer-list__logo {
+    display: block;
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: $white-text;
+}
+  
+.footer-list__logo-label {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: $blue-text;
+}
+
+.footer-contacts {
+    text-align: center;
+}
+  
+.footer-contacts__location {
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 8px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: $white-text;
+    white-space: nowrap;
+}
+  
+.footer-contacts__mail {
+    display: block;
+    margin-bottom: 9px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: $gray-text-op60;
+    transition: 250ms $timing;
+}
+  
+.footer-contacts__mail:hover {
+    color: $blue-text;
+}
+  
+.footer-contacts__tel {
+    display: block;
+    margin-bottom: 60px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: $gray-text-op60;
+    transition: 250ms $timing;
+}
+  
+.footer-contacts__tel:hover {
+    color: $blue-text;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+
+.footer-social__title {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    color: $white-text;
+}
+   
+.social-list {
+    width: 210px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-list__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: $footer-social;
+    color: $white-text;
+    transition: 250ms $timing;
+}
+   
+.social-list__link:hover,
+.social-list__link:focus {
+    color: $white-text;
+    background-color: $blue-color;
+}
+   
+.social-list__icon {
+    fill: currentColor;
+}
+
+.container-subscription {
+    display: flex;
+    flex-direction: column;
+}
+  
+.subscription-label {
+    margin-bottom: 20px;
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    color: $white-text;
+}
+  
+.subscription-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.email-input {
+    width: 450px;
+    padding: 0px;
+    padding-left: 16px;
+    margin-bottom: 20px;
+    background-color: $hero-color;
+    box-sizing: border-box;
+    height: 50px;
+    border: 1px solid $footer-border;
+    border-radius: 4px;
+    outline: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: $gray-text-op60;
+}
+  
+.email-input:focus {
+    box-shadow: 0 0 0 1px $blue-color;
+}
+  
+.form-comment::placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: $gray-text-op60;
+}
+  
+.subscription__button {
+    min-width: 200px;
+    padding-left: 32px; 
+    padding-top: 10px;
+    padding-right: 32px; 
+    padding-bottom: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px;
+    border-radius: 4px;
+    background-color: $blue-color;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    color: $white-text;
+    transition: 250ms $timing;
+}
+  
+.icon-wrapper {
+    display: flex;
+    margin-left: 10px;
+    color: $white-text;
+}
+  
+.icon-wraper__icon {
+    fill: currentColor;
+}
