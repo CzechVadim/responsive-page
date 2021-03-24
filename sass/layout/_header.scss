@@ -3,6 +3,7 @@
 }
 
 .header__container {
+    position: relative;
     display: flex;
     align-items: center;
     padding-left: 15px;
@@ -12,6 +13,8 @@
 
 .logo {
     margin-right: 88px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -30,8 +33,19 @@
     letter-spacing: 0.03em;
     color: $blue-text;
 }
-  
-/*.nav__list {
+
+.nav {
+    display: flex;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+}
+
+.nav__list {
     display: flex;
 }
   
@@ -89,6 +103,7 @@
 .contacts-list {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin-left: auto;
 }
 
@@ -120,4 +135,4 @@
   
 .contacts-list__link:hover {
     color: $blue-text;
-}*/
+}

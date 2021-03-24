@@ -311,6 +311,7 @@ address {
 }
 
 .header__container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -324,6 +325,8 @@ address {
 
 .logo {
   margin-right: 88px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -343,96 +346,133 @@ address {
   color: #2196F3;
 }
 
-/*.nav__list {
-    display: flex;
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
 }
-  
+
+@media screen and (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .nav__item {
-    margin-right: 50px; 
+  margin-right: 50px;
 }
-  
+
 .nav__item:last-child {
-    margin-right: 0px; 
+  margin-right: 0px;
 }
-  
+
 .nav__link {
-    position: relative;
-    display: block; 
-    padding-top: 32px; 
-    padding-bottom: 32px; 
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-    color: $black-text;
-    transition: 250ms $timing;
+  position: relative;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: #212121;
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-  
+
 .nav__link--current {
-    color: $blue-text;
+  color: #2196F3;
 }
-  
+
 .nav__link:hover {
-    color: $blue-text;
+  color: #2196F3;
 }
-  
+
 .nav__link::after {
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    transform: scaleX(0);
-    transition: transform 250ms $timing;
-    display: block;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: $blue-color;
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #2196F3;
 }
-  
+
 .nav__link:hover::after {
-    transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
-  
+
 .nav__link--current::after {
-    transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
-  
+
 .contacts-list {
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: auto;
 }
 
 .contacts-list__item:first-child {
-    margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
-  
+
 .contacts-list__icon {
-    margin-right: 10px;
-    fill: currentColor;
-    transition: 250ms var(--timing);
+  margin-right: 10px;
+  fill: currentColor;
+  -webkit-transition: 250ms var(--timing);
+  transition: 250ms var(--timing);
 }
-  
+
 .contacts-list__icon:hover {
-    fill: var(--blue-text);
+  fill: var(--blue-text);
 }
 
 .contacts-list__link {
-    display: flex;
-    align-items: center;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.02em;
-    color: $gray-color;
-    transition: 250ms $timing;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+  color: #AFB1B8;
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-  
+
 .contacts-list__link:hover {
-    color: $blue-text;
-}*/
+  color: #2196F3;
+}
+
 .hero {
   height: 400px;
   margin-left: auto;
@@ -1203,11 +1243,11 @@ address {
   padding-bottom: 48px;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) ease-in-out;
-  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) ease-in-out;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) ease-in-out;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) ease-in-out, -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) ease-in-out;
-  background-color: aqua;
+  -webkit-transition: -webkit-transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #FFFFFF;
 }
 
 .menu-container.is-open {
@@ -1237,6 +1277,12 @@ address {
   outline: none;
 }
 
+@media screen and (min-width: 768px) {
+  .button-toggle {
+    display: none;
+  }
+}
+
 .button-toggle:hover,
 .button-toggle:focus {
   color: #2196F3;
@@ -1246,21 +1292,24 @@ address {
   fill: currentColor;
 }
 
-.nav__list {
+.button-toggle_open-icon {
+  fill: currentColor;
+}
+
+.mobile-nav__list {
   padding-left: 40px;
-  padding-bottom: 300px;
   outline: 1px solid red;
 }
 
-.nav__item {
+.mobile-nav__item {
   margin-bottom: 40px;
 }
 
-.nav__item:last-child {
+.mobile-nav__item:last-child {
   margin-bottom: 0px;
 }
 
-.nav__link {
+.mobile-nav__link {
   display: block;
   font-style: normal;
   font-weight: 500;
@@ -1272,25 +1321,25 @@ address {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav__link:hover {
+.mobile-nav__link:hover {
   color: #2196F3;
 }
 
-.nav__link--current {
+.mobile-nav__link--current {
   color: #2196F3;
 }
 
-.contacts-list {
+.mobile-contacts {
   padding-left: 40px;
   padding-bottom: 60px;
   outline: 1px solid red;
 }
 
-.contacts-list__item:first-child {
+.mobile-contacts__item:first-child {
   margin-bottom: 32px;
 }
 
-.contacts-list__tel {
+.mobile-contacts__tel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1307,7 +1356,7 @@ address {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts-list__mail {
+.mobile-contacts__mail {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1324,11 +1373,18 @@ address {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.mobile-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 .mobile-social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding-left: 40px;
+  padding-bottom: 48px;
   outline: 1px solid red;
 }
 
@@ -1342,6 +1398,11 @@ address {
   padding-left: 0px;
 }
 
+.mobile-social__item:last-child {
+  padding-right: 0px;
+  border: none;
+}
+
 .mobile-social__link {
   font-style: normal;
   font-weight: 500;
@@ -1351,5 +1412,218 @@ address {
   color: #2196F3;
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio {
+  background-color: #FFFFFF;
+}
+
+.portfolio-container {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  outline: 1px solid red;
+}
+
+.button-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .button-card {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    outline: 1px solid red;
+    margin-bottom: 30px;
+  }
+}
+
+.button-card__list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 8px;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .button-card__list:last-child {
+    margin-right: 0px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .button-card__list:nth-last-child(-n + 2) {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .button-card__list {
+    margin-bottom: 0px;
+  }
+}
+
+.button-job {
+  padding-left: 22px;
+  padding-top: 6px;
+  padding-right: 22px;
+  padding-bottom: 6px;
+  min-width: 29px;
+  border: 0px;
+  border-radius: 4px;
+  background-color: #F5F4FA;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-job:hover,
+.button-job:focus,
+.button-job:active {
+  background-color: #2196F3;
+  color: #FFFFFF;
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-card {
+  background-color: #FFFFFF;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.portfolio-list {
+  margin-bottom: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #EEEEEE;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-list {
+    width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+    outline: 1px solid red;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-list:nth-child(2n) {
+    margin-right: 0px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .portfolio-list:nth-last-child(-n + 1) {
+    margin-bottom: 0px;
+  }
+}
+
+.portfolio-list:last-child {
+  margin-bottom: 0px;
+}
+
+.portfolio-list:hover,
+.portfolio-list:focus {
+  color: #2196F3;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-list__thumb {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.portfolio-list__img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.portfolio-list__actions {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translatey(100%);
+          transform: translatey(100%);
+  width: 100%;
+  height: 300px;
+  background-color: rgba(33, 150, 243, 0.9);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-list__link:hover
+.portfolio-list__actions {
+  -webkit-transform: translatey(0);
+          transform: translatey(0);
+}
+
+.portfolio-list__desc {
+  margin-left: 24px;
+  margin-top: 63px;
+  margin-right: 24px;
+  margin-bottom: 63px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+}
+
+.portfolio-list__name {
+  margin-top: 20px;
+  margin-bottom: 4px;
+  margin-left: 24px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 0.06em;
+  color: #212121;
+}
+
+.portfolio-list__type {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  margin-left: 24px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+  color: #757575;
 }
 /*# sourceMappingURL=main.css.map */
